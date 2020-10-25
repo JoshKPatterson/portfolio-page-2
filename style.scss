@@ -1,0 +1,102 @@
+:root {
+  --primary-color: #0A0045;
+  --circles-light-mode: #C5C8DE;
+  --circles-dark-mode: #0F0066;
+  --text-highlight: rgba(135, 205, 255, 0.4);
+  --project-card-buttons: #2B6731;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--primary-color)
+}
+
+#navbar {
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 2.8rem;
+  width: 100%;
+  height: 10.5vh;
+  display: inline-block;
+  nav {
+    height: 100%;
+    margin: 0 0.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.hamburger {
+  margin-right: 3vw;
+  input {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    z-index: 2;
+    // opacity: 0;
+  }
+  span {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 30px;
+    height: 5px;
+    background-color: white;
+    transform-origin: 4px 0px;
+    margin-bottom: 6px;
+    &:first-child{
+      transform-origin: 0% 0%;
+    }
+    &:nth-last-child(2){
+      transform-origin: 0% 100%;
+    }
+  }
+}
+#hamburger-menu
+{
+  position: absolute;
+  width: 100vw;
+  height: 89.5vh;
+  left: 0;
+  top: 10.5vh;
+  padding: 1em 0 0 1em;
+  background: var(--primary-color);
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  a{
+    text-decoration: none;
+  }
+  li
+  {
+    padding: 0.5em 0;
+    color: white;
+    i {
+      color: white;
+      padding-right: 0.5em;
+    }
+  }
+}
+
+.hamburger {
+  input {
+    &:checked{
+      ~ #hamburger-menu {
+        transform: none;
+      }
+    }
+  }
+}
