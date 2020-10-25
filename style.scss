@@ -1,3 +1,9 @@
+////////////////////////////////////////////////////////////////////////
+/////// 
+///////        Global Properties
+///////
+////////////////////////////////////////////////////////////////////////
+
 :root {
   --primary-color: #0A0045;
   --circles-light-mode: #C5C8DE;
@@ -15,6 +21,12 @@ body {
   font-family: 'Poppins', sans-serif;
   color: var(--primary-color)
 }
+
+////////////////////////////////////////////////////////////////////////
+/////// 
+///////        Navbar Properties
+///////
+////////////////////////////////////////////////////////////////////////
 
 #navbar {
   background-color: var(--primary-color);
@@ -35,6 +47,7 @@ body {
 
 .hamburger {
   margin-right: 3vw;
+  // Hidden Checkbox
   input {
     display: block;
     position: absolute;
@@ -42,7 +55,14 @@ body {
     height: 30px;
     z-index: 2;
     // opacity: 0;
+    // Animate Hidden Menu
+    &:checked{
+      ~ #hamburger-menu {
+        transform: none;
+      }
+    }
   }
+  // Create Hamburger
   span {
     display: block;
     position: relative;
@@ -60,8 +80,8 @@ body {
     }
   }
 }
-#hamburger-menu
-{
+// Hidden Menu
+#hamburger-menu {
   position: absolute;
   width: 100vw;
   height: 89.5vh;
@@ -84,19 +104,15 @@ body {
   {
     padding: 0.5em 0;
     color: white;
-    i {
-      color: white;
-      padding-right: 0.5em;
-    }
+  }
+  i {
+    color: white;
+    padding-right: 0.5em;
   }
 }
 
-.hamburger {
-  input {
-    &:checked{
-      ~ #hamburger-menu {
-        transform: none;
-      }
-    }
-  }
-}
+////////////////////////////////////////////////////////////////////////
+/////// 
+///////        Section One Properties
+///////
+////////////////////////////////////////////////////////////////////////

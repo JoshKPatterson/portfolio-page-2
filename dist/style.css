@@ -43,6 +43,9 @@ body {
   height: 30px;
   z-index: 2;
 }
+.hamburger input:checked ~ #hamburger-menu {
+  transform: none;
+}
 .hamburger span {
   display: block;
   position: relative;
@@ -84,11 +87,7 @@ body {
   padding: 0.5em 0;
   color: white;
 }
-#hamburger-menu li i {
+#hamburger-menu i {
   color: white;
   padding-right: 0.5em;
-}
-
-.hamburger input:checked ~ #hamburger-menu {
-  transform: none;
 }
