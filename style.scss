@@ -55,38 +55,9 @@ h3 {
 ///////
 ////////////////////////////////////////////////////////////////////////
 
-.circles-bg {
-  position: absolute;
-  z-index: -10;
-  width: 100%;
-  height: auto;
-}
 
-.circle {
-  border-radius: 50%;
-}
+// To Be Added
 
-.circle-light {
-  background-color: var(--circles-light-mode);
-}
-
-.circle-one {
-  // position: absolute;
-  position: fixed;
-  height: 26.5rem;
-  width: 26.5rem;
-  // top: 7.5rem;
-  left: 6.375rem;
-}
-
-.circle-two {
-  position: absolute;
-  // height: 16.813rem;
-  // width: 16.813rem;
-  // top:  29.125rem;
-  // left: -8.125rem;
-
-}
 
 ////////////////////////////////////////////////////////////////////////
 /////// 
@@ -112,7 +83,12 @@ h3 {
 }
 
 .hamburger {
+  height: 50px;
+  width: 50px;
   margin-right: 3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   // Hidden Checkbox
   input {
     display: block;
@@ -120,32 +96,60 @@ h3 {
     width: 30px;
     height: 30px;
     z-index: 2;
-    // opacity: 0;
+    opacity: 0;
     // Animate Hidden Menu
     &:checked {
       ~ .hamburger-menu {
         transform: none;
       }
+      ~ .hamburger-button span {
+        &:nth-of-type(1){
+          top: 12.5px;
+          transform: rotate(135deg);
+        }
+        &:nth-of-type(2){
+          transform: translateX(-60px);
+          opacity: 0;
+        }
+        &:nth-of-type(3){
+          top: 12.5px;
+          transform: rotate(-135deg);
+        }
+      }
     }
   }
+}
   // Create Hamburger
+.hamburger-button {
+  position: relative;
+  height: 60%;
+  width: 60%;
+}
+
   span {
     display: block;
-    position: relative;
+    position: absolute;
     z-index: 1;
     width: 30px;
     height: 5px;
     background-color: white;
-    transform-origin: 4px 0px;
-    margin-bottom: 6px;
-    &:first-child{
-      transform-origin: 0% 0%;
+    transform: rotate(0deg);
+    border-radius: 20px;
+    // transform-origin: 4px 0px;
+    // margin-bottom: 6px;
+    transition: 0.25s ease-in-out;
+    &:nth-of-type(1){
+      // transform-origin: 0% 0%;
+      top: 0px;
     }
-    &:nth-last-child(2){
-      transform-origin: 0% 100%;
+    &:nth-of-type(2){
+      top: 12.5px;
+    }
+    &:nth-of-type(3){
+      top: 25px;
     }
   }
-}
+
 // Hidden Menu
 .hamburger-menu {
   z-index: 10;
@@ -296,12 +300,14 @@ h3 {
 .project-card {
   // height: 34rem;
   margin-bottom: 4rem;
-  border: 1px solid #b9b9b9;
+  // border: 1px solid #b9b9b9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
   border-radius: 8px;
   position: relative;
   width: 100%;
   &::before {
-    padding-top: 180%;
+    padding-top: 200%;
     // padding-top: 34rem;
     content: '';
     display: block;
@@ -339,4 +345,128 @@ h3 {
 h5 {
   font-size: 1.875rem;
   font-weight: bold;
+}
+
+.card-technologies {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin-bottom: 0.6rem;
+}
+
+.card-technologies-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 0.3rem;
+    &:nth-last-child(1){
+      margin-bottom: 0;
+    }
+}
+
+.technology {
+  background-color: var(--primary-color);
+  margin: 0 0.2rem;
+  &:nth-of-type(1){
+    margin-lefT: 0;
+  }
+  &:nth-last-of-type(1){
+    margin-right: 0;
+  }
+  p {
+    font-size: 1.125rem;
+    font-weight: bold;
+    padding: 0.1875rem 0.5rem;
+    color: white;
+    
+  }
+}
+
+.card-description {
+  margin: 0 1.25rem 1rem 1.25rem;
+  p {
+    font-weight: bold;
+    font-size: 0.875rem;
+  }
+}
+
+.card-buttons {
+  display: flex;
+  width: 90%;
+  flex-direction: row;
+  justify-content: space-around;
+  a {
+    text-decoration: none;
+    // padding: 0.3rem 0.875rem;
+    padding: 0.3rem 0;
+    width: 46%;
+    background-color: var(--project-card-buttons);
+    color: white;
+    font-weight: bold;
+    font-size: 1.188rem;
+    border-radius: 5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3)
+  }
+}
+
+////////////////////////////////////////////////////////////////////////
+/////// 
+///////        Section Four Properties
+///////
+////////////////////////////////////////////////////////////////////////
+
+#contact {
+  .header-container {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.contact-container {
+  margin: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  ul {
+    padding-left: 0;
+    width: 65%;
+  }
+  li {
+    list-style: none;
+    border: solid 3px var(--primary-color);
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.875rem;
+    display: flex;
+    flex-direction: row;
+    // padding: 0.5rem 0;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    &:nth-last-of-type(1){
+      margin-bottom: 0;
+    }
+  }
+  i {
+    // width: 50px;
+    padding: 10px 0 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+  }
+  p {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.contact-bottom {
+  text-align: center;
+  font-size: 0.625rem;
 }
