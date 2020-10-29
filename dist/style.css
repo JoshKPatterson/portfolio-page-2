@@ -17,10 +17,10 @@ body {
   z-index: 0;
 }
 
-h2, h3 {
+h2 {
   position: relative;
 }
-h2::after, h3::after {
+h2::after {
   content: "";
   position: absolute;
   left: 0;
@@ -30,14 +30,14 @@ h2::after, h3::after {
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 3.25rem;
 }
 h2::after {
-  height: 12px;
+  height: 16px;
 }
 
 h3 {
-  font-size: 1.75rem;
+  font-size: 2.75rem;
 }
 h3::after {
   height: 10px;
@@ -48,7 +48,7 @@ h3::after {
   color: white;
   font-size: 2.8rem;
   width: 100%;
-  height: 10.5vh;
+  height: 4.5rem;
   display: inline-block;
 }
 #navbar nav {
@@ -122,10 +122,10 @@ span:nth-of-type(3) {
 .hamburger-menu {
   z-index: 10;
   position: absolute;
-  width: 100vw;
+  width: calc(100vw - 1em);
   height: 89.5vh;
   left: 0;
-  top: 10.5vh;
+  top: 4.5rem;
   padding: 1em 0 0 1em;
   background: var(--primary-color);
   list-style-type: none;
@@ -166,14 +166,11 @@ span:nth-of-type(3) {
   padding-right: 0.5em;
 }
 
-#hero {
-  height: 100vh;
-}
 #hero .container {
   margin: 10vh 5vw 0 5vw;
 }
 #hero h1 {
-  font-size: 3.375rem;
+  font-size: 4.5rem;
   line-height: 1;
   font-weight: bold;
   margin-bottom: 4vh;
@@ -190,8 +187,13 @@ span:nth-of-type(3) {
   left: 0;
   bottom: 0.25em;
   width: 100%;
-  height: 9px;
+  height: 12px;
   background-color: var(--text-highlight);
+}
+#hero img {
+  max-width: 100%;
+  display: block;
+  margin: 7.5rem auto;
 }
 
 #about {
@@ -212,13 +214,8 @@ span:nth-of-type(3) {
 #about .text-container p {
   text-align: center;
   font-weight: bold;
-  font-size: 0.875rem;
-}
-#about .text-container p:first-of-type {
   margin-bottom: 2rem;
-}
-#about .text-container p:nth-last-of-type(1) {
-  margin-bottom: 2rem;
+  font-size: 1.25rem;
 }
 
 .skills-container {
@@ -245,6 +242,11 @@ span:nth-of-type(3) {
   justify-content: center;
 }
 
+.projects-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .project-card {
   margin-bottom: 4rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
@@ -252,14 +254,8 @@ span:nth-of-type(3) {
   position: relative;
   width: 100%;
 }
-.project-card::before {
-  padding-top: 200%;
-  content: "";
-  display: block;
-}
 
 .card-content {
-  position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
@@ -287,13 +283,14 @@ span:nth-of-type(3) {
 }
 
 h5 {
-  font-size: 1.875rem;
+  font-size: 2.5rem;
   font-weight: bold;
 }
 
 .card-technologies {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   width: 80%;
@@ -313,7 +310,7 @@ h5 {
 
 .technology {
   background-color: var(--primary-color);
-  margin: 0 0.2rem;
+  margin: 0.2rem;
 }
 .technology:nth-of-type(1) {
   margin-lefT: 0;
@@ -341,17 +338,24 @@ h5 {
   width: 90%;
   flex-direction: row;
   justify-content: space-around;
+  margin-bottom: 1em;
 }
 .card-buttons a {
   text-decoration: none;
   padding: 0.3rem 0;
-  width: 46%;
+  width: max(48%, 7rem);
   background-color: var(--project-card-buttons);
   color: white;
   font-weight: bold;
   font-size: 1.188rem;
   border-radius: 5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border: 3px solid var(--project-card-buttons);
+  transition: 0.125s ease-in-out;
+}
+.card-buttons a:hover {
+  background-color: white;
+  color: var(--project-card-buttons);
 }
 
 #contact .header-container {
@@ -360,7 +364,7 @@ h5 {
 }
 
 .contact-container {
-  margin: 4rem 0;
+  margin: 4rem 0 8rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -369,6 +373,7 @@ h5 {
 .contact-container ul {
   padding-left: 0;
   width: 65%;
+  max-width: 750px;
 }
 .contact-container li {
   list-style: none;
@@ -380,9 +385,24 @@ h5 {
   flex-direction: row;
   margin-bottom: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  color: var(--primary-color);
+  transition: 0.25s ease-in-out;
 }
 .contact-container li:nth-last-of-type(1) {
   margin-bottom: 0;
+}
+.contact-container li:hover {
+  background-color: var(--primary-color);
+}
+.contact-container li:hover i, .contact-container li:hover p {
+  color: white;
+}
+.contact-container a {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  text-decoration: none;
+  color: var(--primary-color);
 }
 .contact-container i {
   padding: 10px 0 10px 10px;
@@ -401,4 +421,87 @@ h5 {
 .contact-bottom {
   text-align: center;
   font-size: 0.625rem;
+}
+
+@media (min-width: 769px) {
+  .nav-logo {
+    font-size: 2.8rem;
+  }
+
+  #navbar input {
+    display: none;
+  }
+  #navbar ul {
+    font-size: 1.5rem;
+  }
+  #navbar a {
+    margin-right: 1rem;
+  }
+  #navbar a:nth-last-of-type(1) {
+    margin-right: 0;
+  }
+  #navbar i {
+    display: none;
+  }
+
+  .hamburger {
+    width: 70%;
+  }
+
+  .hamburger-menu {
+    z-index: 10;
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    left: 0;
+    top: 0;
+    padding: 0;
+    transform: translate(0, 0);
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .hamburger-button {
+    display: none;
+  }
+}
+@media (min-width: 769px) {
+  .skills-container {
+    grid-template-columns: repeat(8, 40px);
+    grid-template-rows: auto;
+  }
+}
+@media (min-width: 769px) {
+  .projects-container {
+    flex-direction: row;
+  }
+
+  .project-card {
+    margin-right: 1rem;
+  }
+  .project-card:nth-last-of-type(1) {
+    margin-right: 0;
+  }
+
+  .card-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card-buttons a {
+    width: 90%;
+    margin-bottom: 1rem;
+  }
+  .card-buttons a:nth-last-of-type(1) {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 1312px) {
+  .card-buttons {
+    flex-direction: row;
+  }
+  .card-buttons a {
+    margin-bottom: 0;
+    width: max(48%, 7rem);
+  }
 }
