@@ -506,6 +506,10 @@ h5 {
   .li-dark-mode {
     border: solid 3px white;
     color: white;
+    &:hover {
+      background-color: white;
+      color: var(--primary-color);
+    }
   }
   a {
     display: flex;

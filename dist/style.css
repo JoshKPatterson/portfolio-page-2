@@ -428,6 +428,10 @@ h5 {
   border: solid 3px white;
   color: white;
 }
+.contact-container .li-dark-mode:hover {
+  background-color: white;
+  color: var(--primary-color);
+}
 .contact-container a {
   display: flex;
   flex-direction: row;
