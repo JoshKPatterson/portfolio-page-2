@@ -6,6 +6,16 @@
   --project-card-buttons: #2B6731;
 }
 
+.light-mode {
+  background-color: white;
+  color: var(--primary-color);
+}
+
+.dark-mode {
+  background-color: var(--primary-color);
+  color: white;
+}
+
 *, *::before, *::after {
   margin: 0;
   scroll-behavior: smooth;
@@ -13,7 +23,6 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  color: var(--primary-color);
   z-index: 0;
 }
 
@@ -58,6 +67,20 @@ h3::after {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+}
+
+.light-dark-button i {
+  background-color: white;
+  color: var(--primary-color);
+  padding: 0.3rem;
+  border-radius: 10px;
+  transition: 0.25s ease-in-out;
+  border: 3px solid white;
+  cursor: pointer;
+}
+.light-dark-button i:hover {
+  background-color: var(--primary-color);
+  color: white;
 }
 
 .hamburger {
@@ -174,8 +197,10 @@ span:nth-of-type(3) {
   line-height: 1;
   font-weight: bold;
   margin-bottom: 4vh;
+  color: inherit;
 }
 #hero h4 {
+  color: inherit;
   display: inline;
   font-size: 1.875rem;
   font-weight: 400;
@@ -248,6 +273,8 @@ span:nth-of-type(3) {
 }
 
 .project-card {
+  background-color: white;
+  color: var(--primary-color);
   margin-bottom: 4rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   border-radius: 8px;
@@ -343,7 +370,7 @@ h5 {
 .card-buttons a {
   text-decoration: none;
   padding: 0.3rem 0;
-  width: max(48%, 7rem);
+  width: max(40%, 7rem);
   background-color: var(--project-card-buttons);
   color: white;
   font-weight: bold;
@@ -397,12 +424,16 @@ h5 {
 .contact-container li:hover i, .contact-container li:hover p {
   color: white;
 }
+.contact-container .li-dark-mode {
+  border: solid 3px white;
+  color: white;
+}
 .contact-container a {
   display: flex;
   flex-direction: row;
   width: 100%;
   text-decoration: none;
-  color: var(--primary-color);
+  color: inherit;
 }
 .contact-container i {
   padding: 10px 0 10px 10px;
@@ -426,8 +457,13 @@ h5 {
 @media (min-width: 769px) {
   .nav-logo {
     font-size: 2.8rem;
+    position: absolute;
+    left: 0.5rem;
   }
 
+  #navbar nav {
+    justify-content: flex-end;
+  }
   #navbar input {
     display: none;
   }
@@ -440,12 +476,16 @@ h5 {
   #navbar a:nth-last-of-type(1) {
     margin-right: 0;
   }
-  #navbar i {
-    display: none;
+
+  .light-dark-button {
+    margin-right: 0.2rem;
   }
 
   .hamburger {
-    width: 70%;
+    width: 350px;
+  }
+  .hamburger i {
+    display: none;
   }
 
   .hamburger-menu {
@@ -460,6 +500,7 @@ h5 {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
+    transition: none;
   }
 
   .hamburger-button {
@@ -502,6 +543,6 @@ h5 {
   }
   .card-buttons a {
     margin-bottom: 0;
-    width: max(48%, 7rem);
+    width: max(40%, 7rem);
   }
 }

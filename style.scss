@@ -12,6 +12,16 @@
   --project-card-buttons: #2B6731;
 }
 
+.light-mode {
+  background-color: white;
+  color: var(--primary-color)
+}
+
+.dark-mode {
+  background-color: var(--primary-color);
+  color: white;
+}
+
 *, *::before, *::after {
   margin: 0;
   scroll-behavior: smooth;
@@ -19,7 +29,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  color: var(--primary-color);
+  // color: var(--primary-color);
   z-index: 0;
 }
 
@@ -81,6 +91,22 @@ h3 {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+  }
+}
+
+.light-dark-button {
+  i {
+    background-color: white;
+    color: var(--primary-color);
+    padding: 0.3rem;
+    border-radius: 10px;
+    transition: 0.25s ease-in-out;
+    border: 3px solid white;
+    cursor: pointer;
+    &:hover {
+      background-color: var(--primary-color);
+      color: white;
+    }
   }
 }
 
@@ -217,8 +243,10 @@ h3 {
     line-height: 1;
     font-weight: bold;
     margin-bottom: 4vh;
+    color: inherit;
   }
   h4 {
+    color: inherit;
     display: inline;
     font-size: 1.875rem;
     font-weight: 400;
@@ -303,6 +331,8 @@ h3 {
 }
 
 .project-card {
+  background-color: white;
+  color: var(--primary-color);
   // height: 34rem;
   margin-bottom: 4rem;
   // border: 1px solid #b9b9b9;
@@ -410,7 +440,7 @@ h5 {
     text-decoration: none;
     // padding: 0.3rem 0.875rem;
     padding: 0.3rem 0;
-    width: max(48%, 7rem);
+    width: max(40%, 7rem);
     background-color: var(--project-card-buttons);
     color: white;
     font-weight: bold;
@@ -473,12 +503,17 @@ h5 {
       background-color: var(--primary-color);
     }
   }
+  .li-dark-mode {
+    border: solid 3px white;
+    color: white;
+  }
   a {
     display: flex;
     flex-direction: row;
     width: 100%;
     text-decoration: none;
-    color: var(--primary-color)
+    // color: var(--primary-color)
+    color: inherit;
   }
   i {
     // width: 50px;
@@ -512,9 +547,14 @@ h5 {
 @media (min-width: 769px){
   .nav-logo {
     font-size: 2.8rem;
+    position: absolute;
+    left: 0.5rem;
   }
- 
+
   #navbar {
+    nav {
+      justify-content: flex-end;
+    }
     input {
       display: none;
     }
@@ -527,13 +567,18 @@ h5 {
         margin-right: 0;
       }
     }
-    i {
-      display: none;
-    }
+    
+  }
+
+  .light-dark-button {
+    margin-right: 0.2rem;
   }
 
   .hamburger {
-    width: 70%;
+    width: 350px;
+    i {
+      display: none;
+    }
   }
   .hamburger-menu {
     z-index: 10;
@@ -547,6 +592,7 @@ h5 {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
+    transition: none;
   }
   .hamburger-button {
     display: none;
@@ -594,7 +640,7 @@ h5 {
     flex-direction: row;
     a {
       margin-bottom: 0;
-      width: max(48%, 7rem);
+      width: max(40%, 7rem);
     }
   }
 }
