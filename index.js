@@ -10,7 +10,10 @@ const toggleLightDark = () => {
   body.classList.toggle('light-mode')
   body.classList.toggle('dark-mode')
   // contactLis.classList.toggle('light-mode')
-  contactLis.forEach(li => li.classList.toggle('li-dark-mode'))
+  contactLis.forEach(li => (
+    li.classList.toggle('li-dark-mode'),
+    li.classList.toggle('li-light-mode')
+  ));
 
 }
 

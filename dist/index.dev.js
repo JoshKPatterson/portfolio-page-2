@@ -12,7 +12,7 @@ var toggleLightDark = function toggleLightDark() {
   body.classList.toggle('dark-mode'); // contactLis.classList.toggle('light-mode')
 
   contactLis.forEach(function (li) {
-    return li.classList.toggle('li-dark-mode');
+    return li.classList.toggle('li-dark-mode'), li.classList.toggle('li-light-mode');
   });
 };
 

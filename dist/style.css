@@ -404,7 +404,6 @@ h5 {
 }
 .contact-container li {
   list-style: none;
-  border: solid 3px var(--primary-color);
   border-radius: 5px;
   font-weight: bold;
   font-size: 1.875rem;
@@ -412,16 +411,18 @@ h5 {
   flex-direction: row;
   margin-bottom: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  color: var(--primary-color);
   transition: 0.25s ease-in-out;
 }
 .contact-container li:nth-last-of-type(1) {
   margin-bottom: 0;
 }
-.contact-container li:hover {
-  background-color: var(--primary-color);
+.contact-container .li-light-mode {
+  border: solid 3px var(--primary-color);
+  background-color: white;
+  color: var(--primary-color);
 }
-.contact-container li:hover i, .contact-container li:hover p {
+.contact-container .li-light-mode:hover {
+  background-color: var(--primary-color);
   color: white;
 }
 .contact-container .li-dark-mode {
