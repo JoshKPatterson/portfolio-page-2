@@ -14,8 +14,11 @@ const toggleLightDark = () => {
     li.classList.toggle('li-dark-mode'),
     li.classList.toggle('li-light-mode')
   ));
-
 }
 
 lightDarkButton.addEventListener('click', () => toggleLightDark());
 
+/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+particlesJS.load('particles-js', 'assets/particlesjs-config.json', function() {
+  console.log('callback - particles.js config loaded');
+});

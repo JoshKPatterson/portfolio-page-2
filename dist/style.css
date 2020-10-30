@@ -52,6 +52,12 @@ h3::after {
   height: 10px;
 }
 
+canvas {
+  position: fixed;
+  z-index: -999;
+  top: 0;
+}
+
 #navbar {
   background-color: var(--primary-color);
   color: white;
