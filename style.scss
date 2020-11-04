@@ -332,13 +332,13 @@ canvas {
 .projects-container {
   display: flex;
   flex-direction: column;
+  margin-bottom: 4rem;
 }
 
 .project-card {
   background-color: white;
   color: var(--primary-color);
   // height: 34rem;
-  margin-bottom: 4rem;
   // border: 1px solid #b9b9b9;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 
@@ -436,11 +436,12 @@ h5 {
 
 .card-buttons {
   display: flex;
-  width: 90%;
+  width: 100%;
   flex-direction: row;
   justify-content: space-around;
   margin-bottom: 1em;
   a {
+    text-align: center;
     text-decoration: none;
     // padding: 0.3rem 0.875rem;
     padding: 0.3rem 0;
@@ -634,11 +635,14 @@ h5 {
   }
   .project-card {
     margin-right: 1rem;
+    position: relative;
     &:nth-last-of-type(1){
       margin-right: 0;
     }
   }
   .card-buttons {
+    position: absolute;
+    bottom: 0;
     flex-direction: column;
     align-items: center;
     a {
@@ -649,6 +653,9 @@ h5 {
       }
     }
   }
+  .card-content {
+    padding-bottom: 9rem;
+  }
 }
 
 @media (min-width: 1312px){
@@ -658,6 +665,9 @@ h5 {
       margin-bottom: 0;
       width: max(40%, 7rem);
     }
+  }
+  .card-content {
+    padding-bottom: 5rem;
   }
 }
 

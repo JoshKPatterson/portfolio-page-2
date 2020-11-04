@@ -275,12 +275,12 @@ span:nth-of-type(3) {
 .projects-container {
   display: flex;
   flex-direction: column;
+  margin-bottom: 4rem;
 }
 
 .project-card {
   background-color: white;
   color: var(--primary-color);
-  margin-bottom: 4rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   border-radius: 8px;
   position: relative;
@@ -367,12 +367,13 @@ h5 {
 
 .card-buttons {
   display: flex;
-  width: 90%;
+  width: 100%;
   flex-direction: row;
   justify-content: space-around;
   margin-bottom: 1em;
 }
 .card-buttons a {
+  text-align: center;
   text-decoration: none;
   padding: 0.3rem 0;
   width: max(40%, 7rem);
@@ -530,12 +531,15 @@ h5 {
 
   .project-card {
     margin-right: 1rem;
+    position: relative;
   }
   .project-card:nth-last-of-type(1) {
     margin-right: 0;
   }
 
   .card-buttons {
+    position: absolute;
+    bottom: 0;
     flex-direction: column;
     align-items: center;
   }
@@ -546,6 +550,10 @@ h5 {
   .card-buttons a:nth-last-of-type(1) {
     margin-bottom: 0;
   }
+
+  .card-content {
+    padding-bottom: 9rem;
+  }
 }
 @media (min-width: 1312px) {
   .card-buttons {
@@ -554,5 +562,9 @@ h5 {
   .card-buttons a {
     margin-bottom: 0;
     width: max(40%, 7rem);
+  }
+
+  .card-content {
+    padding-bottom: 5rem;
   }
 }
