@@ -28,6 +28,7 @@ body {
 
 h2 {
   position: relative;
+  font-size: 3.25rem;
 }
 h2::after {
   content: "";
@@ -38,18 +39,12 @@ h2::after {
   background-color: var(--text-highlight);
 }
 
-h2 {
-  font-size: 3.25rem;
-}
 h2::after {
   height: 16px;
 }
 
 h3 {
   font-size: 2.75rem;
-}
-h3::after {
-  height: 10px;
 }
 
 canvas {
@@ -285,6 +280,10 @@ span:nth-of-type(3) {
   border-radius: 8px;
   position: relative;
   width: 100%;
+  margin-bottom: 1.5rem;
+}
+.project-card:nth-last-of-type(1) {
+  margin-bottom: 0;
 }
 
 .card-content {
@@ -531,6 +530,7 @@ h5 {
 
   .project-card {
     margin-right: 1rem;
+    margin-bottom: 0;
     position: relative;
   }
   .project-card:nth-last-of-type(1) {
