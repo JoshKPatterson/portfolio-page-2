@@ -23,4 +23,8 @@ lightDarkButton.addEventListener('click', function () {
 
 particlesJS.load('particles-js', 'assets/particlesjs-config.json', function () {
   console.log('callback - particles.js config loaded');
-});
+}); // .hamburger-checkbox
+
+var closeHamburger = function closeHamburger() {
+  document.querySelector('.hamburger-checkbox').click();
+};

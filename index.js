@@ -22,3 +22,8 @@ lightDarkButton.addEventListener('click', () => toggleLightDark());
 particlesJS.load('particles-js', 'assets/particlesjs-config.json', function() {
   console.log('callback - particles.js config loaded');
 });
+
+// .hamburger-checkbox
+const closeHamburger = () => {
+  document.querySelector('.hamburger-checkbox').click();
+}

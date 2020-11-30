@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
   <link rel="stylesheet" href="dist/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
@@ -12,7 +13,7 @@
   <div id='particles-js'>
   <section id='navbar'>
     <nav>
-      <div class="nav-logo">JP</div>
+      <a class="nav-logo" href='#hero'>JP</a>
       <div class="light-dark-button"><i id='light-dark-button' class="fas fa-moon"></i></div>
       <div class="hamburger">
         <input type='checkbox' class='hamburger-checkbox'>
@@ -22,21 +23,23 @@
           <span></span>
         </div>
         <ul class="hamburger-menu">
-          <a href="#about"><li><i class="fas fa-caret-right"></i>About Me</li></a>
-          <a href="#projects"><li><i class="fas fa-caret-right"></i>Projects</li></a>
-          <a href="#contact"><li><i class="fas fa-caret-right"></i>Contact</li></a>
+          <a href="#about" onclick=closeHamburger()><li><i class="fas fa-caret-right"></i>About Me</li></a>
+          <a href="#projects" onclick=closeHamburger()><li><i class="fas fa-caret-right"></i>Projects</li></a>
+          <a href="#contact" onclick=closeHamburger()><li><i class="fas fa-caret-right"></i>Contact</li></a>
         </ul>
       </div>
     </nav>
   </section>
-  <section id="hero">
+  <section id="heroSection">
+    <a class="anchor" id='hero'></a>
     <div class="container">
       <h1>Hi, I'm Joshua</h1>
       <h4>a web developer</h4>
       <img src="undraw_feeling_proud_qne1.svg" alt="" srcset="">
     </div>
   </section>
-  <section id="about">
+  <section id="aboutSection">
+    <a class="anchor" id='about'></a>
     <div class="container">
       <div class="header-container">
         <h2>About Me</h2>
@@ -64,7 +67,8 @@
       </div>
     </div>
   </section>
-  <section id='projects'>
+  <section id='projectsSection'>
+    <a class="anchor" id='projects'></a>
     <div class="container">
       <div class="header-container">
         <h2>Projects</h2>
@@ -192,7 +196,8 @@
       </div>
     </div>
   </section>
-  <section id="contact">
+  <section id="contactSection">
+    <a class="anchor" id='contact'></a>
     <div class="header-container">
       <h2>Contact</h2>
     </div>
