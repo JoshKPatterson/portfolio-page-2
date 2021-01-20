@@ -1,20 +1,20 @@
 ////////////////////////////////////////////////////////////////////////
-/////// 
+///////
 ///////        Global/Shared Properties
 ///////
 ////////////////////////////////////////////////////////////////////////
 
 :root {
-  --primary-color: #0A0045;
-  --circles-light-mode: #C5C8DE;
-  --circles-dark-mode: #0F0066;
+  --primary-color: #0a0045;
+  --circles-light-mode: #c5c8de;
+  --circles-dark-mode: #0f0066;
   --text-highlight: rgba(135, 205, 255, 0.4);
-  --project-card-buttons: #1F7F7F;
+  --project-card-buttons: #1f7f7f;
 }
 
 .light-mode {
   background-color: white;
-  color: var(--primary-color)
+  color: var(--primary-color);
 }
 
 .dark-mode {
@@ -22,13 +22,15 @@
   color: white;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   z-index: 0;
 }
 
@@ -36,7 +38,7 @@ h2 {
   position: relative;
   font-size: 3.25rem;
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     bottom: 0.4em;
@@ -52,22 +54,21 @@ h2 {
 }
 
 h3 {
-  font-size: 2.75rem;
+  font-size: 2.6rem;
 }
 
 .anchor {
   display: block;
-    position: relative;
-    top: -4.5rem;
-    visibility: hidden;
+  position: relative;
+  top: -4.5rem;
+  visibility: hidden;
 }
 
 ////////////////////////////////////////////////////////////////////////
-/////// 
+///////
 ///////        Background Properties
 ///////
 ////////////////////////////////////////////////////////////////////////
-
 
 canvas {
   position: fixed;
@@ -75,9 +76,8 @@ canvas {
   top: 0;
 }
 
-
 ////////////////////////////////////////////////////////////////////////
-/////// 
+///////
 ///////        Navbar Properties
 ///////
 ////////////////////////////////////////////////////////////////////////
@@ -143,15 +143,15 @@ canvas {
         transform: none;
       }
       ~ .hamburger-button span {
-        &:nth-of-type(1){
+        &:nth-of-type(1) {
           top: 12.5px;
           transform: rotate(135deg);
         }
-        &:nth-of-type(2){
+        &:nth-of-type(2) {
           transform: translateX(-60px);
           opacity: 0;
         }
-        &:nth-of-type(3){
+        &:nth-of-type(3) {
           top: 12.5px;
           transform: rotate(-135deg);
         }
@@ -159,33 +159,33 @@ canvas {
     }
   }
 }
-  // Create Hamburger
+// Create Hamburger
 .hamburger-button {
   position: relative;
   height: 60%;
   width: 60%;
 }
 
-  span {
-    display: block;
-    position: absolute;
-    z-index: 1;
-    width: 30px;
-    height: 5px;
-    background-color: white;
-    transform: rotate(0deg);
-    border-radius: 20px;
-    transition: 0.25s ease-in-out;
-    &:nth-of-type(1){
-      top: 0px;
-    }
-    &:nth-of-type(2){
-      top: 12.5px;
-    }
-    &:nth-of-type(3){
-      top: 25px;
-    }
+span {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  width: 30px;
+  height: 5px;
+  background-color: white;
+  transform: rotate(0deg);
+  border-radius: 20px;
+  transition: 0.25s ease-in-out;
+  &:nth-of-type(1) {
+    top: 0px;
   }
+  &:nth-of-type(2) {
+    top: 12.5px;
+  }
+  &:nth-of-type(3) {
+    top: 25px;
+  }
+}
 
 // Hidden Menu
 .hamburger-menu {
@@ -213,7 +213,7 @@ canvas {
     color: white;
     position: relative;
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       bottom: 0;
@@ -238,7 +238,7 @@ canvas {
 }
 
 ////////////////////////////////////////////////////////////////////////
-/////// 
+///////
 ///////        Section One Properties
 ///////
 ////////////////////////////////////////////////////////////////////////
@@ -265,7 +265,7 @@ canvas {
     font-weight: 400;
     position: relative;
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       bottom: 0.25em;
@@ -282,7 +282,7 @@ canvas {
 }
 
 ////////////////////////////////////////////////////////////////////////
-/////// 
+///////
 ///////        Section Two Properties
 ///////
 ////////////////////////////////////////////////////////////////////////
@@ -326,7 +326,7 @@ canvas {
 }
 
 ////////////////////////////////////////////////////////////////////////
-/////// 
+///////
 ///////        Section Three Properties
 ///////
 ////////////////////////////////////////////////////////////////////////
@@ -337,8 +337,13 @@ canvas {
     display: flex;
     justify-content: center;
   }
+  .container {
+    margin: 0 auto;
+    max-width: fit-content;
+  }
 }
-.projects-container {
+.projects-container,
+.coming-soon-container {
   display: flex;
   flex-direction: column;
   margin-bottom: 4rem;
@@ -405,18 +410,18 @@ h5 {
   flex-direction: row;
   justify-content: center;
   margin-bottom: 0.3rem;
-    &:nth-last-child(1){
-      margin-bottom: 0;
-    }
+  &:nth-last-child(1) {
+    margin-bottom: 0;
+  }
 }
 
 .technology {
   background-color: var(--primary-color);
   margin: 0.2rem;
-  &:nth-of-type(1){
-    margin-lefT: 0;
+  &:nth-of-type(1) {
+    margin-left: 0;
   }
-  &:nth-last-of-type(1){
+  &:nth-last-of-type(1) {
     margin-right: 0;
   }
   p {
@@ -424,7 +429,6 @@ h5 {
     font-weight: bold;
     padding: 0.1875rem 0.5rem;
     color: white;
-    
   }
 }
 
@@ -463,7 +467,7 @@ h5 {
 }
 
 ////////////////////////////////////////////////////////////////////////
-/////// 
+///////
 ///////        Section Four Properties
 ///////
 ////////////////////////////////////////////////////////////////////////
@@ -496,10 +500,9 @@ h5 {
     margin-bottom: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     transition: 0.25s ease-in-out;
-    &:nth-last-of-type(1){
+    &:nth-last-of-type(1) {
       margin-bottom: 0;
     }
-    
   }
   .li-light-mode {
     border: solid 3px var(--primary-color);
@@ -546,14 +549,14 @@ h5 {
 }
 
 ////////////////////////////////////////////////////////////////////////
-/////// 
+///////
 ///////        Media Queries
 ///////
 ////////////////////////////////////////////////////////////////////////
 
 ////////////////// Navbar /////////////////////////
 
-@media (min-width: 769px){
+@media (min-width: 769px) {
   .nav-logo {
     font-size: 2.8rem;
     position: absolute;
@@ -572,11 +575,10 @@ h5 {
     }
     a {
       margin-right: 1rem;
-      &:nth-last-of-type(1){
+      &:nth-last-of-type(1) {
         margin-right: 0;
       }
     }
-    
   }
 
   .light-dark-button {
@@ -612,7 +614,7 @@ h5 {
 
 ////////////////// Section Two ////////////////////
 
-@media (min-width: 769px){
+@media (min-width: 769px) {
   .skills-container {
     grid-template-columns: repeat(8, 40px);
     grid-template-rows: auto;
@@ -621,17 +623,22 @@ h5 {
 
 ////////////////// Section Three //////////////////
 
-@media (min-width: 769px){
+@media (min-width: 769px) {
   .projects-container {
     flex-direction: row;
+  }
+  .coming-soon-container {
+    display: grid;
+    place-items: center;
   }
   .project-card {
     margin-right: 1rem;
     margin-bottom: 0;
     position: relative;
-    &:nth-last-of-type(1){
+    &:nth-last-of-type(1) {
       margin-right: 0;
     }
+    max-width: 500px;
   }
   .card-buttons {
     position: absolute;
@@ -641,7 +648,7 @@ h5 {
     a {
       width: 90%;
       margin-bottom: 1rem;
-      &:nth-last-of-type(1){
+      &:nth-last-of-type(1) {
         margin-bottom: 0;
       }
     }
@@ -651,7 +658,7 @@ h5 {
   }
 }
 
-@media (min-width: 1312px){
+@media (min-width: 1312px) {
   .card-buttons {
     flex-direction: row;
     a {

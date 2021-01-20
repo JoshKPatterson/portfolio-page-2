@@ -1,9 +1,9 @@
 :root {
-  --primary-color: #0A0045;
-  --circles-light-mode: #C5C8DE;
-  --circles-dark-mode: #0F0066;
+  --primary-color: #0a0045;
+  --circles-light-mode: #c5c8de;
+  --circles-dark-mode: #0f0066;
   --text-highlight: rgba(135, 205, 255, 0.4);
-  --project-card-buttons: #1F7F7F;
+  --project-card-buttons: #1f7f7f;
 }
 
 .light-mode {
@@ -16,7 +16,9 @@
   color: white;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   scroll-behavior: smooth;
 }
@@ -44,7 +46,7 @@ h2::after {
 }
 
 h3 {
-  font-size: 2.75rem;
+  font-size: 2.6rem;
 }
 
 .anchor {
@@ -285,8 +287,13 @@ span:nth-of-type(3) {
   display: flex;
   justify-content: center;
 }
+#projectsSection .container {
+  margin: 0 auto;
+  max-width: fit-content;
+}
 
-.projects-container {
+.projects-container,
+.coming-soon-container {
   display: flex;
   flex-direction: column;
   margin-bottom: 4rem;
@@ -363,7 +370,7 @@ h5 {
   margin: 0.2rem;
 }
 .technology:nth-of-type(1) {
-  margin-lefT: 0;
+  margin-left: 0;
 }
 .technology:nth-last-of-type(1) {
   margin-right: 0;
@@ -547,10 +554,16 @@ h5 {
     flex-direction: row;
   }
 
+  .coming-soon-container {
+    display: grid;
+    place-items: center;
+  }
+
   .project-card {
     margin-right: 1rem;
     margin-bottom: 0;
     position: relative;
+    max-width: 500px;
   }
   .project-card:nth-last-of-type(1) {
     margin-right: 0;
