@@ -626,17 +626,19 @@ h5 {
 @media (min-width: 769px) {
   .projects-container {
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .coming-soon-container {
     display: grid;
     place-items: center;
   }
   .project-card {
-    margin-right: 1rem;
-    margin-bottom: 0;
+    margin: 2rem;
+    margin-top: 0;
     position: relative;
     &:nth-last-of-type(1) {
-      margin-right: 0;
+      margin-bottom: 2rem;
     }
     max-width: 500px;
   }
@@ -668,6 +670,9 @@ h5 {
   }
   .card-content {
     padding-bottom: 5rem;
+  }
+  .project-card {
+    max-width: 500px;
   }
 }
 
